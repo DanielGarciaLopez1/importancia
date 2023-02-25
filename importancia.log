@@ -1,0 +1,23 @@
+INFO:root:Started Usa
+DEBUG:asyncio:Using selector: EpollSelector
+DEBUG:google.auth._default:Checking None for explicit credentials as part of auth process...
+DEBUG:google.auth._default:Checking Cloud SDK credentials as part of auth process...
+DEBUG:google.auth._default:Cloud SDK credentials not found on disk; not using them
+DEBUG:google.auth.transport._http_client:Making request: GET http://169.254.169.254
+DEBUG:google.auth.transport._http_client:Making request: GET http://metadata.google.internal/computeMetadata/v1/project/project-id
+DEBUG:urllib3.util.retry:Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG:google.auth.transport.requests:Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/?recursive=true
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): metadata.google.internal:80
+DEBUG:urllib3.connectionpool:http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/default/?recursive=true HTTP/1.1" 200 None
+DEBUG:google.auth.transport.requests:Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/daniel.garcia@prosfy.com/token?scopes=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fbigquery%2Chttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform
+DEBUG:urllib3.connectionpool:Resetting dropped connection: metadata.google.internal
+DEBUG:urllib3.connectionpool:http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/daniel.garcia@prosfy.com/token?scopes=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fbigquery%2Chttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): bigquery.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://bigquery.googleapis.com:443 "POST /upload/bigquery/v2/projects/prosfy-12037/jobs?uploadType=multipart HTTP/1.1" 200 1459
+DEBUG:google.cloud.bigquery.opentelemetry_tracing:This service is instrumented using OpenTelemetry. OpenTelemetry or one of its components could not be imported; please add compatible versions of opentelemetry-api and opentelemetry-instrumentation packages in order to get BigQuery Tracing data.
+DEBUG:urllib3.connectionpool:https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/prosfy-12037/jobs/6fd37550-2fcb-4d56-bc44-5e2cb21ccea9?location=europe-west3&prettyPrint=false HTTP/1.1" 200 None
+DEBUG:google.api_core.retry:Retrying due to , sleeping 1.0s ...
+DEBUG:urllib3.connectionpool:https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/prosfy-12037/jobs/6fd37550-2fcb-4d56-bc44-5e2cb21ccea9?location=europe-west3&prettyPrint=false HTTP/1.1" 200 None
+DEBUG:google.api_core.retry:Retrying due to , sleeping 0.4s ...
+DEBUG:urllib3.connectionpool:https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/prosfy-12037/jobs/6fd37550-2fcb-4d56-bc44-5e2cb21ccea9?location=europe-west3&prettyPrint=false HTTP/1.1" 200 None
+INFO:root:Finished Usa
